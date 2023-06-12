@@ -1,11 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+// Implementation Linked List 
+//Adding elemet at the head: complexity is O(1) 
+//Adding elemet at the tail:complexity is O(1) 
+//Adding elemet at a specific position:is O(n) 
+
+//Delete elemet at the head: complexity is O(1) 
+//Delete elemet at the tail:complexity is O(1) 
+//Delete elemet at a specific position:is O(n) 
+
+//Search elemet complexity  is O(n)
+
+//Change elemet complexity  is O(n)
+
+
 
 namespace DataStructure.Utils
 {
+    
 
     class  Node<T>
     {
@@ -45,15 +58,22 @@ namespace DataStructure.Utils
                 currentNode.Next = newNode;
             }
         }
-
+        public void AddAll(IEnumerable<T> collection)
+        {
+            foreach (T item in collection)
+            {
+                Add(item);
+            }
+        }
         public void Print()
         {
             Node<T> currentNode = _head;
             while (currentNode != null)
             {
-                Console.WriteLine(currentNode.Value);
+                Console.Write(currentNode.Value + " ");
                 currentNode = currentNode.Next;
             }
+            Console.WriteLine();
         }
         public void Delete(T value)
         {
