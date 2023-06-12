@@ -1,5 +1,11 @@
 ﻿using System;
 
+// Impalamate ArryList
+// Search complexities  is O(1)
+// Add complexities  is O(n)
+// Delete (removing an element at the end of the list): O(1)
+// Delete (removing an element at a specific index): O(n)
+
 namespace DataStructure.Utils
 {
     class ArrayListImpl<T>
