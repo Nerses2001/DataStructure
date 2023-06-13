@@ -164,7 +164,6 @@ namespace DataStructure
             myStack.Push(20);
             myStack.Push(30);
             myStack.Print();
-            Console.WriteLine(myStack.Peek());
 
             Console.WriteLine("Size: " + myStack.Size());  
 
@@ -176,6 +175,26 @@ namespace DataStructure
             Console.WriteLine(myStack.Peek());  
 
             Console.WriteLine("Size: " + myStack.Size());
+
+            Console.WriteLine("****************************** Queue ******************************");
+            QueueImp<int> myQueue = new QueueImp<int>(5);
+
+            myQueue.Enqueue(10);
+            myQueue.Enqueue(20);
+            myQueue.Enqueue(30);
+
+            Console.WriteLine("Size of the queue: " + myQueue.Size());
+            Console.WriteLine("Front item: " + myQueue.Peek());
+
+            while (!myQueue.IsEmpty())
+            {
+                Console.WriteLine("Dequeued item: " + myQueue.Dequeue());
+            }
+
+            Console.WriteLine("Is the queue empty? " + myQueue.IsEmpty());
+
+
+           
             Console.ReadLine();
         }
     }
