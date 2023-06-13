@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DataStructure.Utils;
+using DataStructure.Utils.DataStructures;
 
 
 namespace DataStructure
@@ -194,7 +195,29 @@ namespace DataStructure
             Console.WriteLine("Is the queue empty? " + myQueue.IsEmpty());
 
 
-           
+            Console.WriteLine("****************************** Bynery Tree ******************************");
+
+            BinaryTree<int> tree = new BinaryTree<int>();
+
+            tree.AddNode(4);
+            tree.AddNode(2);
+            tree.AddNode(6);
+            tree.AddNode(1);
+            tree.AddNode(3);
+            tree.AddNode(5);
+
+            Console.Write("\nInorder traversal of binary tree is: ");
+            tree.InorderTraversal();
+
+            Console.Write("\nDeleting node 2 from the binary tree... ");
+            tree.DeleteNode(2);
+
+            Console.Write("\nInorder traversal after deletion is: ");
+            tree.InorderTraversal();
+            Console.WriteLine("Binary Tree:");
+            tree.Print();
+
+
             Console.ReadLine();
         }
     }
