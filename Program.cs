@@ -157,9 +157,26 @@ namespace DataStructure
             myHashSetOpt.Print();
 
 
+            Console.WriteLine("****************************** Stack ******************************");
+            StackImp<int> myStack = new StackImp<int>(5);
+
+            myStack.Push(10);
+            myStack.Push(20);
+            myStack.Push(30);
+            myStack.Print();
+            Console.WriteLine(myStack.Peek());
+
+            Console.WriteLine("Size: " + myStack.Size());  
+
+            Console.WriteLine(myStack.Pop());  
+            Console.WriteLine(myStack.Pop());  
+
+            Console.WriteLine("Is Empty: " + myStack.IsEmpty());  
+
+            Console.WriteLine(myStack.Peek());  
+
+            Console.WriteLine("Size: " + myStack.Size());
             Console.ReadLine();
-
-
         }
     }
 }
