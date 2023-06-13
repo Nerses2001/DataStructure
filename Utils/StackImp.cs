@@ -4,7 +4,7 @@ using System.Collections.Generic;
 // Stack LIFO
 // Access O(n)
 // Search O(n)
-// Inser Delete O(1)
+// Insert Delete O(1)
 
 namespace DataStructure.Utils
 {
