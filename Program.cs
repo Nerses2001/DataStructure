@@ -49,6 +49,7 @@ namespace DataStructure
             myArrayList.Add(20);
             myArrayList.Add(30);
             myArrayList.Add(50);
+             
 
             Console.Write("My ArryList is ");
             myArrayList.Print();
@@ -78,9 +79,87 @@ namespace DataStructure
             {
                 Console.Write(element + " ");
             }
+
+            Console.WriteLine();
+
+            Console.WriteLine("****************************** HashSet ******************************");
+            HashSetImpl<int> myHashSet = new HashSetImpl<int>();
+
+            // Add elements to the set
+            myHashSet.Add(1);
+            myHashSet.Add(2);
+            myHashSet.Add(3);
+            myHashSet.Add(1);
+            myHashSet.Add(2);
+            myHashSet.Add(3);
+            myHashSet.Add(1);
+            myHashSet.Add(2);
+            myHashSet.Add(3);
+
+            Console.Write("My HashSet is ");
+            myHashSet.Print();  
+
+            ;
+            Console.Write("My HashSet Lnegth " + myHashSet.Count());
+
+            Console.WriteLine("****************************** HashMap ******************************");
+            HashMapImp<string, int> myDictionary = new HashMapImp<string, int>();
+
+            myDictionary.Add("One", 1);
+            myDictionary.Add("Two", 2);
+            myDictionary.Add("Three", 3);
+
+            Console.WriteLine(myDictionary.ContainsKey("Two")); 
+            Console.WriteLine(myDictionary.ContainsKey("Four"));
+
+            bool removed = myDictionary.Remove("Two");
+            Console.WriteLine($"Key 'Two' removed: {removed}"); 
+
+            int value;
+            bool found = myDictionary.TryGetValue("Three", out value);
+            if (found)
+            {
+                Console.WriteLine($"Value for key 'Three': {value}"); 
+            }
+            else
+            {
+                Console.WriteLine("Key not found.");
+            }
+
+            myDictionary.Print();
+
+
+            Console.WriteLine("****************************** HashSet Optimal ******************************");
+
+            HashSetOptimalImp<string> myHashSetOpt = new HashSetOptimalImp<string>();
+
+            myHashSetOpt.Add("Apple");
+            myHashSetOpt.Add("Banana");
+            myHashSetOpt.Add("Orange");
+            myHashSetOpt.Add("Apple");
+            myHashSetOpt.Add("Banana");
+            myHashSetOpt.Add("Orange");
+            myHashSetOpt.Print();
+            Console.WriteLine(myHashSetOpt.Contains("Apple"));
+            Console.WriteLine(myHashSetOpt.Contains("Grape"));
+
+            bool removedSet = myHashSetOpt.Remove("Banana");
+            Console.WriteLine($"Item 'Banana' removed: {removedSet}");
+
+            myHashSetOpt.Clear();
+
+            int count = myHashSetOpt.Count;
+            Console.WriteLine($"Number of items in the set: {count}");
+
+            myHashSetOpt.Add("Mango");
+            myHashSetOpt.Add("Pineapple");
+
+            myHashSetOpt.Print();
+
+
             Console.ReadLine();
 
-            
+
         }
     }
 }
