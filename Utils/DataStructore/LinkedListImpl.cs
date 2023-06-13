@@ -91,7 +91,7 @@ namespace DataStructure.Utils
             Node<T> currentNode = _head;
             while (currentNode.Next != null)
             {
-                if (currentNode != null && currentNode.Next.Value.Equals(value))
+                if (currentNode.Next.Value.Equals(value))
                 {
                     currentNode.Next = currentNode.Next.Next;
                     return;
@@ -101,6 +101,12 @@ namespace DataStructure.Utils
         }
         public void DeleteAtIndex(int index)
         {
+
+            if (index < 0 || index >= GetLength())
+            {
+                throw new ArgumentOutOfRangeException("Index is out of range.");
+            }
+
             if (index == 0)
             {
                 _head = _head.Next;
@@ -109,7 +115,7 @@ namespace DataStructure.Utils
 
             Node<T> currentNode = _head;
             Node<T> previousNode = null;
-            int currentIndex = 0;
+            int currentIndex = 1;
 
             while (currentNode != null && currentIndex != index)
             {
@@ -138,7 +144,17 @@ namespace DataStructure.Utils
                 currentIndex++;
             }
         }
-
+        private int GetLength()
+        {
+            int length = 0;
+            Node<T> currentNode = _head;
+            while (currentNode != null)
+            {
+                length++;
+                currentNode = currentNode.Next;
+            }
+            return length;
+        }
         public void Reverse()
         {
             Node<T> previousNode = null;

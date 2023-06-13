@@ -214,8 +214,6 @@ namespace DataStructure
 
             Console.Write("\nInorder traversal after deletion is: ");
             tree.InorderTraversal();
-            Console.WriteLine("Binary Tree:");
-            tree.Print();
 
 
             Console.ReadLine();
