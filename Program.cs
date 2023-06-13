@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DataStructure.Utils;
+using DataStructure.Utils.DataStructore;
 using DataStructure.Utils.DataStructures;
 
 
@@ -216,6 +217,39 @@ namespace DataStructure
             tree.InorderTraversal();
 
 
+            // Create BST
+            BST<int> bst = new BST<int>();
+            bst.Insert(1);
+            bst.Insert(2);
+            bst.Insert(3);
+            bst.Insert(-1);
+            bst.Insert(0);
+
+            bst.PrintBFS();
+
+            Console.WriteLine("Min element = " + bst.Min());
+            Console.WriteLine("Max element = " + bst.Max());
+            int number = 3;
+            if (bst.Find(number))
+            {
+                Console.WriteLine(number + " is in the tree");
+            }
+            else
+            {
+                Console.WriteLine(number + " is not in the tree");
+            }
+
+            try
+            {
+                Console.WriteLine(bst.NextNode(0));
+            }
+            catch (InvalidOperationException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            bst.Erase(1);
+            bst.PrintBFS();
             Console.ReadLine();
         }
     }
