@@ -330,7 +330,7 @@ namespace DataStructure
 
             SearchingAlgorithms searching = new SearchingAlgorithms();
 
-            // Using the BinarySearch method
+      
             (bool foundElement, int index) = searching.BinarySearch(sortedList, target);
 
             if (foundElement)
@@ -353,6 +353,38 @@ namespace DataStructure
             {
                 Console.WriteLine("Target not found iteratively in the list.");
             }
+
+            Console.WriteLine("****************************** Dynomic Programing ******************************");
+            DynamicPrograming dp = new DynamicPrograming();
+            int[] arrDp = { 5, 1, 3, 10, 4, 2, 7, -3, 8, 9 };
+            Console.WriteLine("Longest Increasing SubString  Length is " + dp.LongestIncreasingSubString(arrDp));
+
+            DynamicPrograming dynamicProgramming = new DynamicPrograming();
+
+            int[][] inputMatrix = new int[][]
+            {
+                new int[] { 3, 1, 2, 77 },
+                new int[] { 1, 5, 1, 1 },
+                new int[] { 4, 4, 4, 4 }
+            };
+
+            int maxScore = dynamicProgramming.MaxScore(inputMatrix);
+
+            Console.WriteLine("Maximum Score: " + maxScore);
+
+            int[] input = { 2, 1, 4, 3, 5, 10, 12 };
+            Console.WriteLine("Longest Increasing Subsequence: " + dp.LongestIncreasingSubsequence(input));
+
+            int[] inputList = { 2, 1, 4, 3, 5, 10, 12 };
+            Console.WriteLine("Longest Increasing Subsequence (Optimal): " + dp.LongestIncreasingSubsequenceOptimal(inputList));
+
+           
+
+            string s1 = "aaba";
+            string s2 = "aba";
+
+            int longestCommonSubsequence = dp.LCS(s1, s2);
+            Console.WriteLine("Longest Common Subsequence: " + longestCommonSubsequence);
             Console.ReadLine();
         }
     }
