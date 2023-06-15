@@ -279,6 +279,32 @@ namespace DataStructure
             Console.WriteLine("10 and 5 Lcm is " + recursion.Icm(5, 10));
             Console.WriteLine("10 and 5 ByneryGCD is " + recursion.BinaryGCD(5, 10));
 
+            Console.WriteLine("****************************** Algoritms ******************************");
+            Algorithms algorithms = new Algorithms();
+            List<int> primNumber = algorithms.GetPrimeNumbers(10);
+            primNumber.ForEach(n => Console.Write(n + " "));
+            Console.WriteLine();
+            List<int> primNumberOptimalResualt = algorithms.GetPrimeNumbers(10);
+            primNumberOptimalResualt.ForEach(n => Console.Write(n + " "));
+
+            Console.WriteLine("****************************** Sorting Algoritms ******************************");
+            int[] arrayBubleSort = {1,5,2,8,5,6,6,6,0,9,-5,8,22,8888,2,4,2,};
+            SortingAlgorithms sorting = new SortingAlgorithms();
+            sorting.BubllSort(ref arrayBubleSort);
+            for(int i = 0; i < arrayBubleSort.Length; ++i)
+            {
+                Console.Write(arrayBubleSort[i] + " ");
+            }
+
+            Console.WriteLine();
+            int[] arrayMergeSort = {5,8,6,8,2,8,2,2,0,-1,0,-1,1,-1,1,0,1,10,5,5,-22,9,2,4,5};
+            sorting.MergeSort(ref arrayMergeSort);
+
+            Console.Write("Merge Sort working ");
+            for (int i = 0;i < arrayMergeSort.Length; ++i)
+            {
+                Console.Write(arrayMergeSort[i] + " ");
+            }
             Console.ReadLine();
         }
     }

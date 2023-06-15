@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 
 namespace DataStructure.Utils.Algorithms
@@ -47,6 +46,7 @@ namespace DataStructure.Utils.Algorithms
             else return Gcd(a, b - a);
         }
 
+        // O(log n)
         public int Hcf(int a, int b)
         {
             if (b != 0)
