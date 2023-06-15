@@ -277,7 +277,7 @@ namespace DataStructure
             Console.WriteLine("10 and 5 GCD is " + recursion.Gcd(5,10));
             Console.WriteLine("10 and 5 Hsf is " + recursion.Hcf(5, 10));
             Console.WriteLine("10 and 5 Lcm is " + recursion.Icm(5, 10));
-            Console.WriteLine("10 and 5 Lcm is " + recursion.BinaryGCD(5, 10));
+            Console.WriteLine("10 and 5 ByneryGCD is " + recursion.BinaryGCD(5, 10));
 
             Console.ReadLine();
         }

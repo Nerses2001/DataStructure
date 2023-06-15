@@ -58,29 +58,25 @@ namespace DataStructure.Utils.Algorithms
         {
             return a / Hcf(a, b) * b;
         }
+
+        //O((logN)2)
         public int BinaryGCD(int a, int b)
         {
-            // Simple termination cases
             if (b == 0) return a;
             if (a == 0) return b;
 
-            // If both u and v are even, divide them by 2
             if ((a & 1) == 0 && (b & 1) == 0)
                 return BinaryGCD(a >> 1, b >> 1) << 1;
 
-            // If u is even and v is odd, divide u by 2
             else if ((a & 1) == 0)
                 return BinaryGCD(a >> 1, b);
 
-            // If u is odd and v is even, divide v by 2
             else if ((b & 1) == 0)
                 return BinaryGCD(a, b >> 1);
 
-            // If both u and v are odd and u >= v, subtract v from u and divide the result by 2
             else if (a >= b)
                 return BinaryGCD((a - b) >> 1, b);
 
-            // If both u and v are odd and u < v, subtract u from v and divide the result by 2
             else
                 return BinaryGCD(a, (b - a) >> 1);
         }
