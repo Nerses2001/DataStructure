@@ -59,7 +59,7 @@ namespace DataStructure.Utils.Algorithms
             return a / Hcf(a, b) * b;
         }
 
-        //O((logN)2)
+        //O((logN)^2)
         public int BinaryGCD(int a, int b)
         {
             if (b == 0) return a;
