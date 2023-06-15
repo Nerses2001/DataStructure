@@ -324,7 +324,35 @@ namespace DataStructure
                 Console.Write(arrayQuicSort[i] + " ");
             }
 
+            Console.WriteLine("****************************** Searching Algoritms ******************************");
+            int[] sortedList = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
+            int target = 12;
 
+            SearchingAlgorithms searching = new SearchingAlgorithms();
+
+            // Using the BinarySearch method
+            (bool foundElement, int index) = searching.BinarySearch(sortedList, target);
+
+            if (foundElement)
+            {
+                Console.WriteLine("Target found at index: " + index);
+            }
+            else
+            {
+                Console.WriteLine("Target not found in the list.");
+            }
+
+            // Using the BinarySearchIterative method
+            (bool foundIterative, int indexIterative) = searching.BinarySearchIterative(sortedList, target);
+
+            if (foundIterative)
+            {
+                Console.WriteLine("Target found iteratively at index: " + indexIterative);
+            }
+            else
+            {
+                Console.WriteLine("Target not found iteratively in the list.");
+            }
             Console.ReadLine();
         }
     }
