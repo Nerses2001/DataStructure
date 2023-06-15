@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DataStructure.Utils;
+using DataStructure.Utils.Algorithms;
 using DataStructure.Utils.DataStructore;
 using DataStructure.Utils.DataStructures;
 
@@ -251,8 +252,8 @@ namespace DataStructure
             bst.Erase(1);
             bst.PrintBFS();
 
-
-            Console.WriteLine("****************************** Red Black Tree******************************");
+            
+            Console.WriteLine("****************************** Red Black Tree ******************************");
             RedBlackTree rbTree= new RedBlackTree();
             rbTree.Insert(5);
             rbTree.Insert(3);
@@ -263,7 +264,21 @@ namespace DataStructure
             rbTree.Insert(11);
             rbTree.Insert(6);
             rbTree.DisplayTree();
+
+            Console.WriteLine("****************************** Recursion ******************************");
+            Recursion recursion = new Recursion();
             
+            int fib15 = recursion.Fib(15);
+            Console.WriteLine("FIb 15 number is " + fib15);
+            
+            int fib10 = recursion.FibOptimal(10);
+            Console.WriteLine("FIb 10 number is " + fib10);
+
+            Console.WriteLine("10 and 5 GCD is " + recursion.Gcd(5,10));
+            Console.WriteLine("10 and 5 Hsf is " + recursion.Hcf(5, 10));
+            Console.WriteLine("10 and 5 Lcm is " + recursion.Icm(5, 10));
+            Console.WriteLine("10 and 5 Lcm is " + recursion.BinaryGCD(5, 10));
+
             Console.ReadLine();
         }
     }
