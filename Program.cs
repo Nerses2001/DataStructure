@@ -250,6 +250,20 @@ namespace DataStructure
 
             bst.Erase(1);
             bst.PrintBFS();
+
+
+            Console.WriteLine("****************************** Red Black Tree******************************");
+            RedBlackTree rbTree= new RedBlackTree();
+            rbTree.Insert(5);
+            rbTree.Insert(3);
+            rbTree.Insert(7);
+            rbTree.Insert(1);
+            rbTree.Insert(9);
+            rbTree.Insert(-1);
+            rbTree.Insert(11);
+            rbTree.Insert(6);
+            rbTree.DisplayTree();
+            
             Console.ReadLine();
         }
     }
