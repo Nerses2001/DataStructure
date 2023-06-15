@@ -305,6 +305,26 @@ namespace DataStructure
             {
                 Console.Write(arrayMergeSort[i] + " ");
             }
+            Console.WriteLine();
+            int[] arrayCountingSort = { 5, 8, 6, 8, 5952, 22, 888, 0, -44, 599, 22, 4, 52, 8, 86, 5, 21, 56, 24, 87, 6, 5, 2, 1 };
+            sorting.CountingSort(ref arrayCountingSort);
+          
+            for (int i = 0; i < arrayCountingSort.Length; ++i)
+            {
+                Console.Write(arrayCountingSort[i] + " ");
+            }
+
+            Console.WriteLine();
+            Console.Write("Quick Sort working ");
+            int[] arrayQuicSort = { 10, 88, 0, -5, 1656, 222, 3, 6, 412, 659, 1, 888, 2255, 222, 666, 2222, 888, 0, 0, 5, 0, -1, -1, 1 };
+            sorting.QuickSort(ref arrayQuicSort);
+
+            for (int i = 0; i < arrayQuicSort.Length; ++i)
+            {
+                Console.Write(arrayQuicSort[i] + " ");
+            }
+
+
             Console.ReadLine();
         }
     }
