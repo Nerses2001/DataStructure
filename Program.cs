@@ -385,6 +385,34 @@ namespace DataStructure
 
             int longestCommonSubsequence = dp.LCS(s1, s2);
             Console.WriteLine("Longest Common Subsequence: " + longestCommonSubsequence);
+
+            Dictionary<int, List<int>> graph = new Dictionary<int, List<int>>();
+            graph.Add(1, new List<int> { 2, 3 });
+            graph.Add(2, new List<int> { 4 });
+            graph.Add(3, new List<int> { 5 });
+            graph.Add(4, new List<int> { 6 });
+            graph.Add(5, new List<int>());
+            graph.Add(6, new List<int>());
+
+      
+            List<bool> used = new List<bool>(new bool[graph.Count + 1]);
+
+            Graph graphObj = new Graph();
+
+            int startVertex = 1;
+            Console.WriteLine("DFS");
+            graphObj.DFS(graph, startVertex, used);
+            Console.WriteLine("BFS");
+            Dictionary<int, List<int>> graph1 = new Dictionary<int, List<int>>()
+            {
+                {0, new List<int> {1, 2}},
+                {1, new List<int> {3}},
+                {2, new List<int> {4}},
+                {3, new List<int> {}},
+                {4, new List<int> {5}},
+                {5, new List<int> {}}
+                                        };
+            graphObj.BFS(graph1);
             Console.ReadLine();
         }
     }
